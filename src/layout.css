@@ -1,0 +1,29 @@
+/* Styles for active link (blue color) */
+.active-link {
+    color: blue !important; /* Ensures the color is applied */
+  }
+  
+  /* Styles for inactive link */
+  .inactive-link {
+    color: inherit; /* Keeps the default color */
+  }
+  .bg-dark {
+    background-color: #343a40 !important;
+  }
+  
+  .bg-light {
+    background-color: #f8f9fa !important;
+  }
+  
+  .nav-link.active-link {
+    color: #fff;
+  }
+  
+  .nav-link.inactive-link {
+    color: #6c757d;
+  }
+  
+  .navbar {
+    background-color: #343a40;
+  }
+  
