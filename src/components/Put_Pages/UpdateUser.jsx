@@ -35,7 +35,7 @@ function UpdateUser() {
     
     if (confirmUpdate) {
       console.log("User Data: ", formattedData);
-      const url = `https://django-api-i7xy.onrender.com/user_api/users/${userDetails.id}/`;
+      const url = `http://127.0.0.1:8000/user_api/users/${userDetails.id}/`;
       try {
         const response = await axios.put(url, formattedData);
         

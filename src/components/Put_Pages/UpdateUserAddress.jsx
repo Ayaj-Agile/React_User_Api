@@ -31,7 +31,7 @@ function UpdateUserAddress() {
       country: formData.country,
     };
 
-    const url = `https://django-api-i7xy.onrender.com/user_api/users/${userId}/address/${userAddress.id}/`;
+    const url = `http://127.0.0.1:8000/user_api/users/${userId}/address/${userAddress.id}/`;
 
     const confirmUpdate = window.confirm(
       `You are updating User Address with User ID: ${userId} and Address ID: ${userAddress.id}`

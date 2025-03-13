@@ -26,7 +26,7 @@ function AddUser() {
       age: parseInt(formData.age), // Ensure age is an integer
     };
 
-    const url = 'https://django-api-i7xy.onrender.com/user_api/users/';
+    const url = 'http://127.0.0.1:8000/user_api/users/';
 
     try {
       const response = await axios.post(url, formattedData);

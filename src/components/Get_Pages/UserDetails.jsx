@@ -12,7 +12,7 @@ function UserDetails() {
   const fetchUserDetails = async () => {
     console.log("Fetching Data From Api..");
     try {
-      const response = await axios.get('https://django-api-i7xy.onrender.com/user_api/users/');
+      const response = await axios.get('http://127.0.0.1:8000/user_api/users/');
       setUsers(response.data.users);  // assuming the response structure has a 'users' field
       setLoading(false);
     } catch (e) {
@@ -46,7 +46,7 @@ function UserDetails() {
 
     if (confirmDelete) {
       try {
-        const response = await axios.delete(`https://django-api-i7xy.onrender.com/user_api/users/${userId}/`);
+        const response = await axios.delete(`http://127.0.0.1:8000/user_api/users/${userId}/`);
         console.log("User Deleted Successfully: ", response.data);
         await fetchUserDetails(); // re-fetch the users after deletion
       } catch (error) {

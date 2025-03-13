@@ -29,7 +29,7 @@ function AddUserAddress() {
       country: formData.country,
     };
 
-    const url = `https://django-api-i7xy.onrender.com/user_api/users/${userId}/address/`;
+    const url = `http://127.0.0.1:8000/user_api/users/${userId}/address/`;
 
     try {
       await axios.post(url, submitData);

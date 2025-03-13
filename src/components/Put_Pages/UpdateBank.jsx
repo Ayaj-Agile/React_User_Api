@@ -29,7 +29,7 @@ function UpdateBank() {
       iban: formData.iban,
     };
 
-    const url = `https://django-api-i7xy.onrender.com/user_api/users/${userId}/bank/${bankDetails.id}/`;
+    const url = `http://127.0.0.1:8000/user_api/users/${userId}/bank/${bankDetails.id}/`;
 
     const confirmUpdate = confirm(`You are updating User bank Details of User ID : ${userId}`);
     if (confirmUpdate) {

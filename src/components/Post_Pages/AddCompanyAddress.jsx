@@ -33,7 +33,7 @@ function AddCompanyAddress() {
       country: formData.country
     }
 
-    const url = `https://django-api-i7xy.onrender.com/user_api/users/company/${compId}/address/`
+    const url = `http://127.0.0.1:8000/user_api/users/company/${compId}/address/`
     try {
       const response = await axios.post(url, submitData)
       console.log("Form submitted Successfully : ", response.data);

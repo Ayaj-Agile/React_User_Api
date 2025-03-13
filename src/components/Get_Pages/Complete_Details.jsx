@@ -19,7 +19,9 @@ function Complete_Details() {
             return; // Return early if userId is not available
         }
         try {
-            const response = await axios.get(`https://django-api-i7xy.onrender.com/user_api/users/${userId}/`);
+            
+            // `https://django-api-i7xy.onrender.com/user_api/users/${userId}/`
+            const response = await axios.get(`http://127.0.0.1:8000/user_api/users/${userId}/`);
             setUserDetails(response.data);
         } catch (error) {
             console.log("Error Occurred: ", error);
@@ -38,8 +40,9 @@ function Complete_Details() {
     const DeleteAddress = async (userId, addId) => {
         const confirmDelete = confirm(`Confirm to delete address ID ${addId} for User ID ${userId}?`);
         if (confirmDelete) {
-        try {
-            await axios.delete(`https://django-api-i7xy.onrender.com/user_api/users/${userId}/address/${addId}/`);
+            try {
+            // `https://django-api-i7xy.onrender.com/user_api/users/${userId}/address/${addId}/`
+            await axios.delete(`http://127.0.0.1:8000/user_api/users/${userId}/address/${addId}/`);
             getUserDetails();
         } catch (error) {
             console.error("Error deleting address:", error);
@@ -52,7 +55,7 @@ function Complete_Details() {
         const confirmDelete = confirm(`Confirm to delete bank ID ${bankId} for User ID ${userId}?`);
         if (confirmDelete) {
         try {
-            await axios.delete(`https://django-api-i7xy.onrender.com/user_api/users/${userId}/bank/${bankId}/`);
+            await axios.delete(`http://127.0.0.1:8000/user_api/users/${userId}/bank/${bankId}/`);
             getUserDetails();
         } catch (error) {
             console.error("Error deleting bank:", error);
@@ -65,7 +68,7 @@ function Complete_Details() {
         const confirmDelete = confirm(`Confirm to delete company ID ${compId} for User ID ${userId} ?`);
         if (confirmDelete) {
         try {
-            await axios.delete(`https://django-api-i7xy.onrender.com/user_api/users/${userId}/company/${compId}/`);
+            await axios.delete(`http://127.0.0.1:8000/user_api/users/${userId}/company/${compId}/`);
             getUserDetails();
         } catch (error) {
             console.error("Error deleting company:", error);

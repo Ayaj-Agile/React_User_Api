@@ -24,7 +24,8 @@ const Dashboard = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('https://django-api-i7xy.onrender.com/user_api/users/');
+      // 'https://django-api-i7xy.onrender.com/user_api/users/' // Deployment Url
+      const response = await axios.get('http://127.0.0.1:8000/user_api/users/');
       setUsers(response.data.users); // Make sure response.data has a users field
     } catch (error) {
       console.log("Error Occurred: ", error);

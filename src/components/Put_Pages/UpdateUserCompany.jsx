@@ -25,7 +25,7 @@ function UpdateUserCompany() {
     title: formData.title,
   };
 
-  const url = `https://django-api-i7xy.onrender.com/user_api/users/${userId}/company/${userCompany.id}/`;
+  const url = `http://127.0.0.1:8000/user_api/users/${userId}/company/${userCompany.id}/`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
